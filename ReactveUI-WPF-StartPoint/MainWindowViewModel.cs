@@ -26,6 +26,7 @@ namespace ReactveUI_WPF_StartPoint
 
             m_RandomService.ConnectList()
                 .ObserveOn(RxApp.MainThreadScheduler)
+                //.Throttle(TimeSpan.FromSeconds(2))
                 .Bind(out _points)
                 .Subscribe(_ => UsePoints());
         }
@@ -39,10 +40,12 @@ namespace ReactveUI_WPF_StartPoint
                     System.Diagnostics.Debug.WriteLine($"{point.X}||{point.Y}");
                 }
             }
+            System.Diagnostics.Debug.WriteLine($"=====================END====================");
         }
 
         private void GenerateNewData(int sets)
         {
+            m_RandomService.Items.Clear();
             for (int i = 0; i < sets; i++)
             {
                 var newList = new List<Point>();
