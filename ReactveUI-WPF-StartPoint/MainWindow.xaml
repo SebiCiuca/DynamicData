@@ -10,6 +10,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Button x:Name="GenerateData" Content="Generate 1 Data Set" Width="100" Height="100" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <Button x:Name="GenerateData2" Content="Generate 2 Data Set" Width="100" Height="100" VerticalAlignment="Center" HorizontalAlignment="Right"/>
     </Grid>
 </reactiveui:ReactiveWindow>

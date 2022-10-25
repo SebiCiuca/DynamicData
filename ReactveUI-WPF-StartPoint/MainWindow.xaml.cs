@@ -18,7 +18,8 @@ namespace ReactveUI_WPF_StartPoint
 
             this.WhenActivated(cleanup =>
             {
-                //this.BindCommand(ViewModel, vm => vm.RandonListCommand, view => view.RandomButton).DisposeWith(cleanup);
+                this.BindCommand(ViewModel, vm => vm.GenerateDataCommand, view => view.GenerateData).DisposeWith(cleanup);
+                this.BindCommand(ViewModel, vm => vm.GenerateData2Command, view => view.GenerateData2).DisposeWith(cleanup);
             });
         }
     }

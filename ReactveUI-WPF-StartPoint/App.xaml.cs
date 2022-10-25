@@ -36,6 +36,7 @@ namespace ReactveUI_WPF_StartPoint
         {
             services.AddSingleton<MainWindowViewModel>();
             services.AddSingleton<MainWindow>();
+            services.AddSingleton<IRandomService, RandomService>();
         }
     }
 }
